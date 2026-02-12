@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "DATABASE_NAME": "@database_name",
+    "SECRET_KEY": "@secret_key",
+    "SMTP_HOST": "@smtp_host",
+    "SMTP_PORT": "@smtp_port",
+    "SMTP_USER": "@smtp_user",
+    "SMTP_PASSWORD": "@smtp_password",
+    "FROM_EMAIL": "@from_email",
+    "GOOGLE_MAPS_API_KEY": "@google_maps_api_key"
+  }
+}
